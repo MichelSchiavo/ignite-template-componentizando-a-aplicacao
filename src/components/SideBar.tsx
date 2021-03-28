@@ -7,12 +7,15 @@ interface SidebarProps {
   content: {
     selectedGenreId: number;
     setSelectedGenreId: any;
-    genres: Array<any>;
+    genres: Array<{
+      id: number;
+      name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
+      title: string;
+    }>;
   }  
 }
 
 export function SideBar({content}: SidebarProps) {
-  // Complete aqui
 
   function handleClickButton(id: number) {
     content.setSelectedGenreId(id);
